@@ -1,0 +1,40 @@
+.header {
+    grid-area: h;
+    background-color: #3498DB;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header img {
+    width: 80px;
+    cursor: pointer;
+}
+
+.title {
+    /*color: #34495E;*/
+    color: #34495E;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    cursor: pointer;
+    margin-right: 75px;
+}
+
+.title:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    border-radius: 6px;
+    bottom: 0;
+    left: 0;
+    background-color: #34495E;
+}
+
+span {
+    color: #34495E;
+}
