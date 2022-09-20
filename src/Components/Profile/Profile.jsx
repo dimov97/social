@@ -2,7 +2,7 @@ import React from 'react';
 import s from './Profile.module.css'
 import {MyPosts} from "./MyPosts/MyPosts";
 import {ProfileInfo} from "./ProfileInfo/ProfileInfo";
-import {addPost, updateNewPostText} from "../../Redux/State";
+import {addPost, updateNewPostText} from "../../Redux/store";
 
 export const Profile = (props) => {
     return (
