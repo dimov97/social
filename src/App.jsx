@@ -9,6 +9,7 @@ import {Music} from "./Components/Music/Music";
 import {Settings} from "./Components/Settings/Settings";
 import {News} from "./Components/News/News";
 import {updateNewPostText} from "./Redux/store";
+import {DialogsContainer} from "./Components/Dialogs/DialogsContainer";
 
 function App(props) {
     return (
@@ -17,10 +18,9 @@ function App(props) {
                 <Navbar/>
                 <div className={s.content}>
                     <Route path={'/profile'} render={()=><Profile
-                        profilePage={props.state.profilePage}
-                        dispatch={props.dispatch}
+                        store={props.store}
                     />}/>
-                    <Route path={'/dialogs'} render={()=><Dialogs store={props.store}/>}/>
+                    <Route path={'/dialogs'} render={()=><DialogsContainer store={props.store}/>}/>
                     <Route path={'/news'} render={()=><News/>}/>
                     <Route path={'/music'} render={()=><Music/>}/>
                     <Route path={'/settings'} render={()=><Settings/>}/>
