@@ -6,7 +6,6 @@ import {BrowserRouter} from "react-router-dom";
 import store from "./Redux/redux-store";
 import {Provider} from "react-redux";
 
-let rerenderEntireTree = (state:any)=> {
     ReactDOM.render(
         <BrowserRouter>
             <Provider store={store}>
@@ -14,12 +13,5 @@ let rerenderEntireTree = (state:any)=> {
             </Provider>
         </BrowserRouter>,
         document.getElementById('root')
-    );
-}
+    )
 
-rerenderEntireTree(store.getState())
-
-store.subscribe(()=>{
-    let state = store.getState();
-    rerenderEntireTree(state);
-})
